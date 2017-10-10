@@ -15,7 +15,7 @@ digo.src("*.sass", "*.scss").pipe("digo-sass-lint");
 ## 选项
 ```js
 digo.src("*.sass", "*.scss").pipe("digo-sass-lint", {
-    level: "error",                     // 报错等级。可以是 "error" 或 "warning"。
+    level: "default",                   // 报错等级。可以是 "default"、"error" 或 "warning"。
     configuration: ".sass-lint.yml",    // 规则文件。详见 https://github.com/sasstools/sass-lint#rules-documentation
 });
 ```

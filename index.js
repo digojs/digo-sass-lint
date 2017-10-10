@@ -1,11 +1,11 @@
-﻿var sasslint = require("sass-lint");
+var sasslint = require("sass-lint");
 
 module.exports = function SassLint(file, options) {
     options = Object.assign({}, options);
     var result = sasslint.lintFileText({
-        'text': file.content,
-        'format': file.ext.replace('.', ''),
-        'filename': file.srcPath
+        text: file.content,
+        format: file.ext.replace('.', ''),
+        filename: file.srcPath
     }, options, options.configuration || ".sass-lint.yml");
 
     for (const output of result.messages) {
@@ -16,7 +16,7 @@ module.exports = function SassLint(file, options) {
             line: output.line,
             column: output.character
         };
-        if (options.level === "warning" || output.severity <= 1) {
+        if (options.level === "warning" || options.level !== "error" && output.severity <= 1) {
             file.warning(e);
         } else {
             file.error(e);

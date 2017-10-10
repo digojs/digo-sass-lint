@@ -1,10 +1,11 @@
 {
     "name": "digo-sass-lint",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "repository": "http://github.com/digojs/digo-sass-lint",
     "description": "digo 插件：使用 Sass-Lint 检查 Sass 代码",
     "keywords": [
-        "digo-plugin"
+        "digo-plugin",
+        "digo-lint"
     ],
     "license": "MIT",
     "author": "xuld <xuld@vip.qq.com>",
